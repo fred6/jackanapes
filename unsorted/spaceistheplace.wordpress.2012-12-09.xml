@@ -49,57 +49,6 @@
 	<atom:link rel='hub' href='http://fredsix.wordpress.com/?pushpress=hub'/>
 
 	<item>
-		<title>interior angle of a regular n-gon</title>
-		<link>http://fredsix.wordpress.com/2012/05/08/interior-angle-of-a-regular-n-gon/</link>
-		<pubDate>Tue, 08 May 2012 03:34:43 +0000</pubDate>
-		<dc:creator>fredsix</dc:creator>
-		<guid isPermaLink="false">http://fredsix.wordpress.com/?p=36</guid>
-		<description></description>
-		<content:encoded><![CDATA[Step 1 is to realize that you can partition a regular n-gon into n isosceles triangles, where the legs of each triangle go from the center of the n-gon to a vertex. draw a circle around the center of the n-gon. circles span $latex 2 \pi$ degrees, so the top angles of the n isosceles triangles must add up to $latex 2 \pi$. so we can say that each isosceles triangle has one angle
-
-$latex \psi = \frac{2 \pi}{n}$
-
-and two other angles
-
-$latex \theta = \frac{\pi - \psi}{2}$
-
-After some magic, it is easy to see that $latex \theta = \frac{\pi(n - 2)}{2n}$.
-
-Now, to get from one side of the n-gon to an adjacent side, we have to go through an angle of $latex 2 \theta = \frac{\pi (n - 2)}{n}$. But there are n sides, so we must go through n angles of $latex 2 \theta$, or
-
-$latex \pi (n - 2)$
-
-So a regular n-gon has $latex \pi (n - 2)$ interior angle.
-
-&nbsp;]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>36</wp:post_id>
-		<wp:post_date>2012-05-08 03:34:43</wp:post_date>
-		<wp:post_date_gmt>2012-05-08 03:34:43</wp:post_date_gmt>
-		<wp:comment_status>open</wp:comment_status>
-		<wp:ping_status>open</wp:ping_status>
-		<wp:post_name>interior-angle-of-a-regular-n-gon</wp:post_name>
-		<wp:status>publish</wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type>post</wp:post_type>
-		<wp:post_password></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="category" nicename="uncategorized"><![CDATA[Uncategorized]]></category>
-		<wp:postmeta>
-			<wp:meta_key>superawesome</wp:meta_key>
-			<wp:meta_value><![CDATA[false]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>jabber_published</wp:meta_key>
-			<wp:meta_value><![CDATA[1336448085]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_edit_last</wp:meta_key>
-			<wp:meta_value><![CDATA[25949232]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-	<item>
 		<title>products and co-products</title>
 		<link>http://fredsix.wordpress.com/?p=48</link>
 		<pubDate>Wed, 30 Nov -0001 00:00:00 +0000</pubDate>
