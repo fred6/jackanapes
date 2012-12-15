@@ -32,9 +32,9 @@ True, the above only works for sine and cosine. But once you understand those tw
 
 You weren't satisfied with that description, either, huh?  Well, take a look at these images (from Wikipedia):
 
-<img class="alignnone" title="Sine, Tangent, Secant" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Unitcircledefs.svg/410px-Unitcircledefs.svg.png" alt="" width="410" height="599" />
+![Unit circle definitions](/images/Unitcircledefs.svg)
 
-<img class="alignnone" title="Cosine, Cotangent, Cosecant" src="http://upload.wikimedia.org/wikipedia/commons/2/2f/Unitcirclecodefs.svg" alt="" width="402" height="402" />
+![Unit circle co-definitions](/images/Unitcirclecodefs.svg)
 
 This gives us an understanding of tangent that is more in line with the idea of a "tangent line": it's the length of the side tangent to the circle at the point, where the triangle is defined by having the same angle as our original angle and having one side be 1 (the radius of the unit circle). That first image also encapsulates the well known relation:
 
