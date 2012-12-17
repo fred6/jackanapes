@@ -1,6 +1,6 @@
 # Open and Closed sets
 
-In a metric space, an **open ball around a** is a set of elements that are *less than* a distance $\epsilon$ from some point $a$, i.e. the set $\left\{{x : d(x,a) &lt; \epsilon}\right\}$. Since I'm interested in $\mathbb{R}$ in particular, using the standard distance metric, this definition becomes: a set $\left\{{x \in \mathbb{R} : |x-a| &lt; \epsilon}\right\}$. We also say that it's an $\epsilon$-ball around $a$ or an $\epsilon$-neighborhood.
+In a metric space, an **open ball around a** is a set of elements that are *less than* a distance $\epsilon$ from some point $a$, i.e. the set $\left\{{x : d(x,a) < \epsilon}\right\}$. Since I'm interested in $\mathbb{R}$ in particular, using the standard distance metric, this definition becomes: a set $\left\{{x \in \mathbb{R} : |x-a| < \epsilon}\right\}$. We also say that it's an $\epsilon$-ball around $a$ or an $\epsilon$-neighborhood.
 
 A set is **open** if every point in the set has an $\epsilon$-ball that fits inside the set.
 
