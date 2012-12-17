@@ -8,10 +8,8 @@
 >
 
 <channel>
-
 	<atom:link rel="search" type="application/opensearchdescription+xml" href="http://fredsix.wordpress.com/osd.xml" title="space is the place" />
 	<atom:link rel='hub' href='http://fredsix.wordpress.com/?pushpress=hub'/>
-
 	<item>
 		<title>Models and the natural transformations between them</title>
 		<link>http://fredsix.wordpress.com/?p=49</link>
@@ -50,83 +48,6 @@ Some preliminary definitions:
 		<wp:postmeta>
 			<wp:meta_key>_edit_last</wp:meta_key>
 			<wp:meta_value><![CDATA[25949232]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-	<item>
-		<title>Basii</title>
-		<link>http://fredsix.wordpress.com/2012/12/09/basii/</link>
-		<pubDate>Sun, 09 Dec 2012 04:41:46 +0000</pubDate>
-		<dc:creator>fredsix</dc:creator>
-		<guid isPermaLink="false">http://fredsix.wordpress.com/?p=183</guid>
-		<description></description>
-		<content:encoded><![CDATA[This post is about bases of vector spaces and a crucial property of them: that every linearly independent set of vectors can be extended to a basis (and, thus, that every vector space has a basis). There are two sides to this, actually: there's an easy proof that's restricted to finite dimensional vector spaces, and then there's the general proof for arbitrary vector spaces that uses Zorn's Lemma. I will cover both, because the infinite case is not too hard and rather fun.
-
-<strong>Definition: </strong>The <strong>span</strong> of a set of vectors is the set of all linear combinations of the vectors.
-
-<strong>Definition: </strong>A <strong>basis</strong> for a vector space $latex V$ is a linearly independent set $latex B$ for which $latex span B = V$.
-
-<strong>Definition: </strong>A vector space is <strong>finite-dimensional </strong>if a finite basis exists for it.
-
-<strong>Lemma/Theorem/whatever: </strong>A given basis  $latex B$ determines unique set of coefficients for each $lavex v \in V$ such that $latex v = \Sigma_i \alpha_i b_i$.
-
-<em>Proof: </em>if $latex v = \Sigma_i \alpha_i b_i = \Sigma_i \xi_i b_i$, then $latex 0 = \Sigma_i (\alpha_i - \xi_i) b_i$. Since $latex B$ is a basis, it's linearly independent, so each $latex \alpha_i - \xi_i = 0$, aka $latex \alpha_i = \xi_i$. QED
-
-Another way of looking (at this is as saying that the function defined from basis set (bases n-tuple, really) to n-tuple of linear combination coefficients is well-defined.
-
-<strong>Theorem: </strong>In a finite-dimensional vector space $latex V$, any linearly independent set $latex A = \left\{{y_1, \ldots, y_k}\right\}$ can be extended to a basis $latex \left\{{y_1, \ldots, y_k, y_{k+1}, \ldots, y_n}\right\} for $latex V$.
-
-<em>Fake Proof:</em>  If $latex A$ is a basis, we're done. Otherwise, some vector $latex v_1 \in V$ is not a linear combination of $latex A$, so set $latex A_1 = A \cup \left\{{v_1}\right\}$. Now repeat; if $latex A_1$ is a basis, we're done, otherwise we can find a $latex v_2$ which is not a linear combination of $latex A_1$. Since $latex V$ is finite dimensional, this construction will eventually find a basis. QED.
-
-Why does the fake proof not work? It's actually fine up to the last line, and it would work if we knew that every basis for a vector space was the same size. (To expand on this: "finite-dimensional" at this point simply means that there's some set for which every vector in $latex V$ is a linear combination of the set. We know there's one such set, but we have no information about what happens when we string together another collection of linearly independent vectors of the same size as the basis.) Since we have not yet proved this, we must resort to a different proof:
-
-<em>Proof:  </em>Since our previous strategy of adding vectors failed because we couldn't guarantee that it would terminate, we will try the opposite strategy: we have a basis $latex \left\{{x_1, \ldots, x_n}\right\}$, so let's add <em>too many</em> vectors to begin, and take them out until the set is linearly indepenent again.
-
-So we take our linearly independent set $latex \left\{{y_1, \ldots, y_k}\right\}$ and the basis and smash them together into a tuple: $latex \left\{{y_1, \ldots, y_k, x_1, \ldots, x_n}\right\}$. This set of vectors is linearly dependent (each $latex y$ is a linear combination of the basis elements), so by the theorem we proved in the last post, there's one element which is a linear combination of the preceding elements. Furthermore, it can't be one of the $latex y_i$'s, because those are linearly independent. So there's some $latex j$ such that $latex x_j$ is in the span of $latex A \cup \left\{{x_1, \ldots, x_{j-1}}\right\}$.
-
-The idea is to just remove that $latex x_j$, resulting in $latex y_1, \ldots, y_k, x_1, \ldots, x_{j-1}, x_{j+1}, \ldots, x_n$. This set still spans $latex V$ because any vector requiring a nonzero coefficient of $latex x_j$ can just use the linear combination to substitute for $latex x_j$. Keep removing basis elements until the set is no longer linearly dependent. At each step, the span never changes, so the result is a basis. QED.
-
-That was instructive, but let's go for the general case. Halmos indicates that this requires "transfinite trickery", but I'm not so certain about that..
-
-<strong>Theorem: </strong>Every vector space has a basis.
-
-<em>Proof: </em>We need an initial result -- the Kuratowski/Zorn Lemma -- which says:
-
-<em>Kuratowski/Zorn Lemma: </em>For any poset $latex P$, if every chain (totally ordered subset) is bounded above, then $latex P$ has a maximal element.
-
-Now take the set $latex \mathcal{L}$ of all linearly independent subsets of $latex V$. This is a poset by set inclusion. For any chain $latex \mathcal{C}$ in $latex \mathcal{L}$, the union $latex \bigcup \mathcal{C}$ is in $latex \mathcal{L}$ because, for any finite subset $latex A$ of $latex \bigcup \mathcal{C}$, there's a linearly independent set $latex C$ for each $latex a \in A$ that (1) contains $latex a$ and (2) is in $latex \mathcal{C}$. Since it's a chain, the biggest of these chains actually contains all elements of $latex A$. So every finite subset of $latex \bigcup \mathcal{C}$ is linearly independent, hence the union is independent. So the union is clearly an upper bound in $latex \mathcal{L}$. So it satisfies the premises for K/L, and hence $latex \mathcal{L}$ has a maximal element $latex M$. This is linearly independent (it's in $latex \mathcal{L}$), so we simply need to prove that it spans $latex V$.
-
-If $latex x \notin M$, we know that $latex X = M \cup \left\{{x}\right\}$ can't be linearly independent, because $latex M$ is maximal. So $latex X$ is linearly dependent, meaning that some finite subset $latex U$ is linearly dependent. $latex U$ must contain $latex x$, otherwise $latex U$ would be a subset of $latex M$, making $latex M$ not linearly independent. Furthermore $latex U - \left\{{x}\right\}$ is linearly independent, so by a theorem in the previous post, $latex x$ must be a linear combination of the $latex U - \left\{{x}\right\}$. Thus $latex x$ is in $latex span M$ after all. QED.
-
-The Kuratowski/Zorn Lemma is equivalent to the Axiom of Choice. That's the price of great power.]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>183</wp:post_id>
-		<wp:post_date>2012-12-09 04:41:46</wp:post_date>
-		<wp:post_date_gmt>2012-12-09 04:41:46</wp:post_date_gmt>
-		<wp:comment_status>open</wp:comment_status>
-		<wp:ping_status>open</wp:ping_status>
-		<wp:post_name>basii</wp:post_name>
-		<wp:status>publish</wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type>post</wp:post_type>
-		<wp:post_password></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="category" nicename="uncategorized"><![CDATA[Uncategorized]]></category>
-		<wp:postmeta>
-			<wp:meta_key>_edit_last</wp:meta_key>
-			<wp:meta_value><![CDATA[25949232]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>superawesome</wp:meta_key>
-			<wp:meta_value><![CDATA[false]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>_publicize_pending</wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>jabber_published</wp:meta_key>
-			<wp:meta_value><![CDATA[1355028106]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 </channel>
