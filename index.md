@@ -8,6 +8,8 @@ Assorted ramblings.
 
   - [Notes on topology](topology.html)
 
+  - [Notes on category theory](category.html)
+
   - [Open and closed sets (in R)](open_closed_sets.html)
   - [Manifestations of completeness (notes on real analysis)](manifestations_of_completeness.html)
 
