@@ -12,9 +12,11 @@ Here's an important fact about open sets, which forms the basis of topological s
 
 (2) If $\left\{{U_1, \ldots, U_n}\right\}$ are open sets, then $S = \bigcap_{i = 1}^{n} U_i$ must be open, for if you take arbitrary $s \in S$, then it's in every $U_i$, so there's some open ball $O_i$ that's inside each $U_i$. Take the smallest open ball, $O_k$, and it's in every $U_i$, so it's in $S$ as well. QED.
 
-Why can't we say that arbitrary intersections of open sets are open too? Where does the proof of (2) fail if we have an infinite family of open sets? It really consists in the fact that we have an infinite set of open ball radii, $C$, we aren't guaranteed to be able to find a minimum element.
+Why can't we say that arbitrary intersections of open sets are open too? Where does the proof of (2) fail if we have an infinite family of open sets? It really consists in the fact that when we have an infinite set of open ball radii, $C$, we aren't guaranteed to be able to find a minimum element.
 
 Here's an important definition: a **limit point** of set $A$ is an element $x \in \mathbb{R}$ for which every open ball around $x$ contains a point of $A - \left\{{x}\right\}$. A limit point is an element which is *approximable* by elements of $A$ distinct from $x$ (in the sense that you can make a sequence of elements of $A$ that converge to $x$ (and that aren't just the constant sequence $(x, x, x, \ldots)$.)
+
+This alternate definition of a limit point might be edifying: a **cluster point** of a set $A$ is an element $x \in \mathbb{R}$ for which every open ball around $x$ contains infinitely many points of $A$. Clearly every cluster point is a limit point (every $\epsilon$-ball contains *infinitely* many points of $A$, so it certainly contains one element that isn't $x$). Also, every limit point must be a cluster point, because *every* $\epsilon$-ball intersects $A - \left\{x\right\}$, and if there were only finitely many points of $A$ in one $\epsilon$-ball, we could take the nearest one and construct a futher $\epsilon_0$-ball that contained no points of $A$, contradicting our supposition that we have a limit point.
 
 Here's that promised theorem about limit points and sequences that converge to them:
 
