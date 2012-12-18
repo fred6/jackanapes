@@ -22,6 +22,6 @@ Here's that promised theorem about limit points and sequences that converge to t
 
 **Theorem:** $x$ is a limit point of $A$ iff there's a sequence $(a_n) \rightarrow x$ and each $a_n \in A - \left\{{x}\right\}$.
 
-*Proof:* $(\Rightarrow)$ if $x$ is a limit point then we can take the $\\epsilon$-balls for $\epsilon_n = \frac{1}{n}$. Inside each $\epsilon_n$ we have some $a \in A, a \neq x$, so set $a_n = a$. This constructs a sequence of elements of $A - \left\{{x}\right\}$ that converges to $x$.
+*Proof:* $(\Rightarrow)$ if $x$ is a limit point then we can take the $\epsilon$-balls for $\epsilon_n = \frac{1}{n}$. Inside each $\epsilon_n$ we have some $a \in A, a \neq x$, so set $a_n = a$. This constructs a sequence of elements of $A - \left\{{x}\right\}$ that converges to $x$.
 
 $(\Leftarrow)$ If theres a sequence $(a_n) \rightarrow x$ contained in $A - \left\{{x}\right\}$ that converges to $x$, then any $\epsilon$-ball around $x$ contains elements of $A - \left\{{x}\right\}$ because for every $\epsilon$ there's a point in the sequence after which terms of the sequence are all within the $\epsilon$-ball around $x$. But terms of the sequence are elements of $A$ that are not equal to $x$ (by hypothesis), so $x$ is a limit point. QED
