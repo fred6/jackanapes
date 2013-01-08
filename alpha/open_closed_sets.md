@@ -57,3 +57,4 @@ This theorem doesn't make sense unless we are in a complete metric space, since 
 *Proof:* First assume that $F$ is closed. If $\(a_n\)$ is a Cauchy sequence in $F$, then it converges to some $a \in \mathbb{R}$. If each $a_k \neq a$, then by the theorem above $a$ is a limit point of $F$. By hypothesis $F$ is closed, so $a \in F$. If not, $a$ is a term of the sequence, so $a \in F$.
 
 Conversely, if every Cauchy sequence contained in $F$ converges in $F$, then for any  limit point $a$ of $F$, there's a sequence of elements of $F$, all distinct from $a$, that converges to $a$. Since it converges, it's a Cauchy sequence, so by hypothesis $a \in F$.
+
