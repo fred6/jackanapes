@@ -7,25 +7,30 @@ function drawDot ( x, y, r ) {
     c.fill();
 }
         
-function ngon_coords(N, cx, cy, s) {
+function ngon_coords(N, cx, cy, s, dotrad) {
     var ang = 2*PI/N;
     var phi = (PI - ang)/2;
 
-    var coords = [];
+    var coords = [],
+        xoff,
+        yoff;
     for ( var i = 0; i < N; i++ ) {
-        coords.push([cx + s*Math.cos(phi - i*ang), cy + s*Math.sin(phi - i*ang)]);
+        xoff = (s - dotrad) * Math.cos(phi - i*ang);
+        yoff = (s - dotrad) * Math.sin(phi - i*ang);
+        coords.push([cx + xoff, cy + yoff]);
     }
     return coords;
 }
 
 function draw ( N, cx, cy, s) {
-    var coords = ngon_coords ( N, cx, cy, s );
+    var dotrad = 40;
+    var coords = ngon_coords ( N, cx, cy, s, dotrad );
     for ( var p = 0; p < coords.length; p++ ) {
-        drawDot ( coords[p][0], coords[p][1], 20 );
+        drawDot ( coords[p][0], coords[p][1], dotrad );
     }
 }
 
 
-draw ( 3, 300, 300, 270 );
+draw ( 14, 300, 300, 270 );
 
 
