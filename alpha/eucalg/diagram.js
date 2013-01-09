@@ -23,7 +23,7 @@ function ngon_coords(N, cx, cy, s, dotrad) {
 }
 
 function draw ( N, cx, cy, s) {
-    var dotrad = 40;
+    var dotrad = 2*s / (N + 3);
     var coords = ngon_coords ( N, cx, cy, s, dotrad );
     for ( var p = 0; p < coords.length; p++ ) {
         drawDot ( coords[p][0], coords[p][1], dotrad );
@@ -31,6 +31,6 @@ function draw ( N, cx, cy, s) {
 }
 
 
-draw ( 14, 300, 300, 270 );
+draw ( 5, 300, 300, 270 );
 
 
