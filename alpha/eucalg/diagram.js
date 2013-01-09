@@ -22,15 +22,23 @@ function ngon_coords(N, cx, cy, s, dotrad) {
     return coords;
 }
 
-function draw ( N, cx, cy, s) {
+function draw ( fs, cx, cy, s) {
+    var N = fs[0];
     var dotrad = 2*s / (N + 3);
     var coords = ngon_coords ( N, cx, cy, s, dotrad );
+
+    var cc; //current coord
     for ( var p = 0; p < coords.length; p++ ) {
-        drawDot ( coords[p][0], coords[p][1], dotrad );
+        cc = coords[p];
+        if ( fs.length > 1 ) {
+            draw ( fs.slice(1), cc[0], cc[1], dotrad );
+        } else {
+            drawDot ( cc[0], cc[1], dotrad );
+        }
     }
 }
 
 
-draw ( 5, 300, 300, 270 );
+draw ( [5, 3, 4], 300, 300, 270 );
 
 
