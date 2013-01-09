@@ -25,7 +25,7 @@ function ngon_coords(N, cx, cy, s, dotrad) {
 
 function draw ( canvas, fs, cx, cy, s) {
     var N = fs[0];
-    var dotrad = 2*s / (N + 3);
+    var dotrad = 2*s / (N + 2.5);
     var coords = ngon_coords ( N, cx, cy, s, dotrad );
 
     var cc; //current coord
@@ -40,7 +40,7 @@ function draw ( canvas, fs, cx, cy, s) {
 }
 
 
-draw (c1, [7, 6], 300, 300, 270 );
-draw (c2, [5, 2, 6], 300, 300, 270 );
+draw (c1, [7, 2, 3], 300, 300, 270 );
+draw (c2, [5, 4, 3], 300, 300, 270 );
 
 
