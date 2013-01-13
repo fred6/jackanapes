@@ -1,4 +1,4 @@
-# A visualization of the euclidean algorithm
+# A visual explanation of the euclidean algorithm
 
 Numbers can be classified as either *composite* or *prime*. Prime numbers have no divisors other than 1 and themselves. Composite numbers, on the other hand, can be decomposed into groupings of smaller numbers. For example, one way to represent 12 is 3 times 4. We can picture this as either 4 groups of 3 or 3 groups of 4:
 
@@ -22,9 +22,6 @@ So, why does it work? The standard response is that algorithm utilizes a *loop i
 
 That explanation may satisfy you, but you would have to 1) already understand why the set of divisors is preserved through each step through the loop, or 2) take my word for it. Since 2) isn't intellectually responsible (you don't even *know* me, and I'm just a pseudonymous internet person) and since 1) isn't likely to be true (otherwise you wouldn't be reading an article that purports to show you what you already understand), we shall have to press the issue to find out the reason why.
 
-Rather than re-invent the wheel, let's do a brief literature review to see if someone already has a good explanation. Wikipedia, can you help us out?
+Let's start with a simple example, 21 and 15. We can visualize 21 as seven groups of 3, and 15 as five groups of 3:
 
-
-![](wiki_eucalg_proof.png)
-
-Sorry, spaced out there. Where were we? Ahh yes, inspecting the uselessness of Wikipedia. I was browsing cat videos on youtube somewhere after the second paragraph.
+![](21_15.png)
