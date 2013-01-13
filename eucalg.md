@@ -63,7 +63,15 @@ After taking two groups of 3 from 15, then taking two more groups of 3 (i.e taki
 This is where the algorithm halts. On the left side we have a single group of 3, so we can subtract it from the right side until there's nothing left. In other words, 6 is divisible by 3, so 3 is the greatest common divider of 21 and 15 (the two numbers we started with, if you recall).
 
 ## A recap and a example with coprimes
-Notice that all of the numbers that the algorithm handled were groups of 3. We started out with groups of three and subtracted groups of 3 from one of the sides, each time resulting in another number which consisted of groups of 3. The end result was a single group of 3, which was how we knew the algorithm was done.
+Notice that all of the numbers that the algorithm handled were groups of 3. We started out with groups of three and subtracted groups of 3 from one of the sides, each time resulting in another number which consisted of groups of 3. The end result was a single group of 3, which was how we knew the algorithm was done (and that the answer was "3").
+
+What happens when the groups that make up number **a** and number **b** are incompatible? Take, for example, 10 and 21:
+
+![](images/21_10_rem1.png)
+
+In the process of taking 10's from 21, we had to break apart one of the groups of 3 that make up 21. In fact, we aren't subtracting groups of 3 from 21 at all, but are instead just taking 10 dots away from the right side. How we group them doesn't appear to matter.
+
+One might allege that perhaps this was just an incidental feature of the way we *arbitrarily chose* to group up the units in 21.
 
 
 
