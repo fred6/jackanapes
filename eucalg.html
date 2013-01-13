@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Euclidean algorithm, visualized - </title>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <style type="text/css">
+    q { quotes: "“" "”" "‘" "’"; }
+  </style>
+      <meta name="viewport" content="width=device-width">
+      <link rel="stylesheet" href="/css/style.css">
+      <script data-main="js/main" src="/js/require.js"></script>
+</head>
+<body>
+<div id="container">
+<h1 id="a-visual-explanation-of-the-euclidean-algorithm">A visual explanation of the euclidean algorithm</h1>
+<h2 id="preliminaries">Preliminaries</h2>
+<p>Numbers can be classified as either <em>composite</em> or <em>prime</em>. Prime numbers have no divisors other than 1 and themselves. Composite numbers, on the other hand, can be decomposed into groupings of smaller numbers. For example, one way to represent 12 is 3 times 4. We can picture this as either 4 groups of 3 or 3 groups of 4:</p>
+<figure>
+<img src="/images/twelve.png"><figcaption></figcaption>
+</figure>
+<p>There is, however, no way to factor primes like 7 into smaller groupings (or, the <q>smaller groups</q> are just groups of 1):</p>
+<figure>
+<img src="/images/seven.png"><figcaption></figcaption>
+</figure>
+<h2 id="the-algorithm">The algorithm</h2>
+<p>Euclid’s algorithm is an algorithm for finding the greatest common divisor of two integers. Here’s a description in words:</p>
+<blockquote>
+<p>To find the greatest common divisor of two numbers, <strong>a</strong> and <strong>b</strong> (<strong>a</strong> &gt; <strong>b</strong>): If <strong>a</strong> is even divisible by <strong>b</strong>, the answer is <strong>b</strong>. Otherwise, if <strong>r</strong> is the remainder of <strong>a</strong> / <strong>b</strong> and <strong>r</strong> is not zero, so the answer is the greatest common divisor of <strong>b</strong> and <strong>r</strong></p>
+</blockquote>
+<p>And one in pseudocode:</p>
+<pre><code>function gcd(a, b):
+    // assuming a &gt; b
+    while (b does not divide a):
+        r = a mod b
+        a = b
+        b = r
+
+    return b</code></pre>
+<p>Here <code>mod</code> means the result of taking <strong>a</strong> modulo <strong>b</strong>, i.e. finding the remainder after dividing <strong>a</strong> by <strong>b</strong>.</p>
+<p>(Notice that the english version used a <em>recursive</em> formulation, while the pseudocode version was <em>imperative</em>. There is no practical difference.)</p>
+<p>The above isn’t very intuitive to me, probably because I’m not very smart. So I made some pictures to help me understand.</p>
+<h2 id="in-pictures">In pictures</h2>
+<p>Let’s start with a simple example, 21 and 15. We can visualize 21 as seven groups of 3, and 15 as five groups of 3:</p>
+<figure>
+<img src="/images/21_15.png"><figcaption></figcaption>
+</figure>
+<p>The euclidean algorithm says this: if we take as many 15’s out of 21 as is possible, the remainder will be some number of groups of 3.</p>
+<figure>
+<img src="/images/21_15_rem1.png"><figcaption></figcaption>
+</figure>
+<p>Well golly, it seems to have worked. The right side has seven groups of 3, the left side has give groups of 3. When we take five groups away from 7 groups, we’re left with two groups of 3, commonly known as 6.</p>
+<p>With a remainder of 6, the algorithm then moves into the next step of finding the GCD of 15 and 6:</p>
+<figure>
+<img src="/images/21_15_rem2.png"><figcaption></figcaption>
+</figure>
+<p>Instead of thinking about division and remainders, we can also think about repeatedly subtracting 6 from 15. Each time we take two groups of 3 away from 15. The steps have been marked as different colors in the above image.</p>
+<p>After taking two groups of 3 from 15, then taking two more groups of 3 (i.e taking two groups of 3 <em>twice</em>), we are left with a single group of 3 on the left side.</p>
+<figure>
+<img src="/images/21_15_rem3.png"><figcaption></figcaption>
+</figure>
+<p>This is where the algorithm halts. On the left side we have a single group of 3, so we can subtract it from the right side until there’s nothing left. In other words, 6 is divisible by 3, so 3 is the greatest common divider of 21 and 15 (the two numbers we started with, if you recall).</p>
+<h2 id="a-recap-and-a-example-with-coprimes">A recap and a example with coprimes</h2>
+<p>Notice that all of the numbers that the algorithm handled were groups of 3. We started out with groups of three and subtracted groups of 3 from one of the sides, each time resulting in another number which consisted of groups of 3. The end result was a single group of 3, which was how we knew the algorithm was done.</p>
+<h2 id="what-do-i-do-with-these-words-if-anything">What do I do with these words, if anything?</h2>
+<p><em>This is not part of the article. These are paragraphs I wrote and then decided then didn’t fit into the above flow, but I wasn’t sure that they were useless enough to be deleted.</em></p>
+<p>So we’re done, right? We’ve just explained why the euclidean algorithm furnishes the GCD, call it <strong>g</strong>, of two numbers, <strong>a</strong> and <strong>b</strong>: it’s because both of the numbers can be represented as multiples of <strong>g</strong>, so that <strong>a</strong> = <strong>j</strong> * <strong>g</strong> and <strong>b</strong> = <strong>k</strong> * <strong>g</strong> for some numbers <strong>j</strong> and <strong>k</strong>. So when you subtract <strong>k</strong> <strong>g</strong>’s from <strong>j</strong> <strong>g</strong>’s, you’re left with (<strong>j</strong> - <strong>k</strong>) <strong>g</strong>’s. <strong>So every remainder is still some number of groups of g. We never break a group up.</strong></p>
+<p>So, why does it work? The standard response is that algorithm utilizes a <em>loop invariant</em>: every common divisor of <strong>a</strong> and <strong>b</strong> is also a divisor of <strong>b</strong> and <strong>r</strong>. Since the set of divisors stays constant for each iteration of the loop, and since we reduce numbers until we can’t do it any more (notice that if we did it one more step, <strong>r</strong> would be equal to 0 since <strong>b</strong> divides <strong>a</strong> after the last step in our algorithm above.) To hammer that point home: every common divisor divides <strong>r</strong>, and therefore divides <strong>b</strong> after each step, including the <strong>biggest</strong> common divisor. If we stop when <strong>b</strong> divides <strong>a</strong>, then we must be stopping when <strong>b</strong> is the greatest common divisor (because we know, at the stopping point, that at least <strong>b</strong> divides <strong>a</strong>, so the GCD must be at least as big as <strong>b</strong>. But we know it can’t be bigger than <strong>b</strong>, because the GCD also divides <strong>b</strong>).</p>
+    <footer>
+    <a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/">
+      <img src="http://i.creativecommons.org/p/zero/1.0/88x31.png" style="border-style: none;" alt="CC0" />
+    </a>
+    <p xmlns:dct="http://purl.org/dc/terms/">
+      To the extent possible under law, the person who associated CC0 with this work has waived all copyright and related or neighboring rights to this work.
+    </p>
+    </footer>
+</div>
+</body>
+</html>
