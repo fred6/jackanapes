@@ -120,8 +120,20 @@ function draw ( canvas, fs, cx, cy, s, color_config) {
 //draw (c1, [2, 3], 450, 315, 90, [{number: 2, color: '#d7cc12'}] );
 
 // 21_15_rem3
-draw (c1, [1, 3], 150, 300, 90, [{number: 1, color: '#1271d3'}] );
-draw (c1, [2, 3], 450, 260, 115, [{number: 1, color: '#d7cc12'},
+//draw (c1, [1, 3], 150, 300, 90, [{number: 1, color: '#1271d3'}] );
+//draw (c1, [2, 3], 450, 260, 115, [{number: 1, color: '#d7cc12'},
+//                                   {number: 1, color: '#1271d3'}] );
+
+// 21_10_rem1
+/*
+draw (c1, [5, 2], 150, 300, 115, [{number: 5, color: '#1271d3'}] );
+draw (c1, [7, 3], 450, 300, 115, [{number: 3, color: '#d31292'},
+                                   {number: 3, color: '#1271d3'}] );
+*/
+
+// 21_10_rem1
+draw (c1, [5, 2], 150, 300, 115, [{number: 5, color: '#1271d3'}] );
+draw (c1, [3, 7], 450, 300, 115, [{number: 1, color: '#d31292'},
                                    {number: 1, color: '#1271d3'}] );
 
 //draw (c1, [7, 2, 3], 300, 300, 270 );
