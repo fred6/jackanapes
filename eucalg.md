@@ -4,11 +4,11 @@
 
 Numbers can be classified as either *composite* or *prime*. Prime numbers have no divisors other than 1 and themselves. Composite numbers, on the other hand, can be decomposed into groupings of smaller numbers. For example, one way to represent 12 is 3 times 4. We can picture this as either 4 groups of 3 or 3 groups of 4:
 
-![](/images/twelve.png)
+![](images/twelve.png)
 
 There is, however, no way to factor primes like 7 into smaller groupings (or, the "smaller groups" are just groups of 1):
 
-![](/images/seven.png)
+![](images/seven.png)
 
 ## The algorithm
 Euclid's algorithm is an algorithm for finding the greatest common divisor of two integers. Here's a description in words:
@@ -38,23 +38,23 @@ The above isn't very intuitive to me, probably because I'm not very smart. So I 
 
 Let's start with a simple example, 21 and 15. We can visualize 21 as seven groups of 3, and 15 as five groups of 3:
 
-![](/images/21_15.png)
+![](images/21_15.png)
 
 The euclidean algorithm says this: if we take as many 15's out of 21 as is possible, the remainder will be some number of groups of 3.
 
-![](/images/21_15_rem1.png)
+![](images/21_15_rem1.png)
 
 Well golly, it seems to have worked. The right side has seven groups of 3, the left side has give groups of 3. When we take five groups away from 7 groups, we're left with two groups of 3, commonly known as 6.
 
 With a remainder of 6, the algorithm then moves into the next step of finding the GCD of 15 and 6:
 
-![](/images/21_15_rem2.png)
+![](images/21_15_rem2.png)
 
 Instead of thinking about division and remainders, we can also think about repeatedly subtracting 6 from 15. Each time we take two groups of 3 away from 15. The steps have been marked as different colors in the above image.
 
 After taking two groups of 3 from 15, then taking two more groups of 3 (i.e taking two groups of 3 *twice*), we are left with a single group of 3 on the left side.
 
-![](/images/21_15_rem3.png)
+![](images/21_15_rem3.png)
 
 This is where the algorithm halts. On the left side we have a single group of 3, so we can subtract it from the right side until there's nothing left. In other words, 6 is divisible by 3, so 3 is the greatest common divider of 21 and 15 (the two numbers we started with, if you recall).
 
