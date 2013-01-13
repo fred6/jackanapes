@@ -26,6 +26,7 @@
 <figure>
 <img src="images/seven.png"><figcaption></figcaption>
 </figure>
+<p>In other words, the units in a composite number clump together into <q>families</q>, while in primes they’re all individualists.</p>
 <p>The main theme in this article will be these groupings of numbers.</p>
 <h2 id="the-algorithm">The algorithm</h2>
 <p>Euclid’s algorithm is an algorithm for finding the greatest common divisor of two integers. Here’s a description in words:</p>
@@ -65,7 +66,17 @@
 </figure>
 <p>This is where the algorithm halts. On the left side we have a single group of 3, so we can subtract it from the right side until there’s nothing left. In other words, 6 is divisible by 3, so 3 is the greatest common divider of 21 and 15 (the two numbers we started with, if you recall).</p>
 <h2 id="a-recap-and-a-example-with-coprimes">A recap and a example with coprimes</h2>
-<p>Notice that all of the numbers that the algorithm handled were groups of 3. We started out with groups of three and subtracted groups of 3 from one of the sides, each time resulting in another number which consisted of groups of 3. The end result was a single group of 3, which was how we knew the algorithm was done.</p>
+<p>Notice that all of the numbers that the algorithm handled were groups of 3. We started out with groups of three and subtracted groups of 3 from one of the sides, each time resulting in another number which consisted of groups of 3. The end result was a single group of 3, which was how we knew the algorithm was done (and that the answer was <q>3</q>).</p>
+<p>What happens when the groups that make up number <strong>a</strong> and number <strong>b</strong> are incompatible? Take, for example, 10 and 21:</p>
+<figure>
+<img src="images/21_10_rem1.png"><figcaption></figcaption>
+</figure>
+<p>In the process of taking 10’s from 21, we had to break apart one of the groups of 3 that make up 21. In fact, we aren’t subtracting groups of 3 from 21 at all, but are instead just taking 10 dots away from the right side. How we group them doesn’t appear to matter.</p>
+<p>One might allege: perhaps this was just an incidental feature of the way we <em>arbitrarily chose</em> to group up the units in 21. Perhaps if we represent 21 as 3 groups of 7, then the euclidean algorithm won’t break up a group:</p>
+<figure>
+<img src="images/21_10_rem1_reorder.png"><figcaption></figcaption>
+</figure>
+<p>Okay, that proves it in the case of the pair (21, 7), but do we have a generic argument for <em>any</em> pair of numbers? If we take a pair of numbers and</p>
 <h2 id="what-do-i-do-with-these-words-if-anything">What do I do with these words, if anything?</h2>
 <p><em>This is not part of the article. These are paragraphs I wrote and then decided then didn’t fit into the above flow, but I wasn’t sure that they were useless enough to be deleted.</em></p>
 <p>So we’re done, right? We’ve just explained why the euclidean algorithm furnishes the GCD, call it <strong>g</strong>, of two numbers, <strong>a</strong> and <strong>b</strong>: it’s because both of the numbers can be represented as multiples of <strong>g</strong>, so that <strong>a</strong> = <strong>j</strong> * <strong>g</strong> and <strong>b</strong> = <strong>k</strong> * <strong>g</strong> for some numbers <strong>j</strong> and <strong>k</strong>. So when you subtract <strong>k</strong> <strong>g</strong>’s from <strong>j</strong> <strong>g</strong>’s, you’re left with (<strong>j</strong> - <strong>k</strong>) <strong>g</strong>’s. <strong>So every remainder is still some number of groups of g. We never break a group up.</strong></p>
