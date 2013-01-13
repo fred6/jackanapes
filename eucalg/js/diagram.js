@@ -59,8 +59,8 @@ function draw ( canvas, fs, cx, cy, s, color_config) {
 }
 
 
-draw (c1, [5, 3], 150, 300, 115 );
-draw (c1, [7, 3], 450, 315, 115, {number: 5, color: '#d75c1d'} );
+draw (c1, [5, 3], 150, 300, 115, {number: 5, color: '#d3121c'} );
+draw (c1, [7, 3], 450, 315, 115, {number: 5, color: '#d3121c'} );
 //draw (c1, [7, 2, 3], 300, 300, 270 );
 //kdraw (c2, [5, 4, 3], 300, 300, 270 );
 
