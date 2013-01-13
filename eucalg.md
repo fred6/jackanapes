@@ -71,7 +71,11 @@ What happens when the groups that make up number **a** and number **b** are inco
 
 In the process of taking 10's from 21, we had to break apart one of the groups of 3 that make up 21. In fact, we aren't subtracting groups of 3 from 21 at all, but are instead just taking 10 dots away from the right side. How we group them doesn't appear to matter.
 
-One might allege that perhaps this was just an incidental feature of the way we *arbitrarily chose* to group up the units in 21.
+One might allege: perhaps this was just an incidental feature of the way we *arbitrarily chose* to group up the units in 21. Perhaps if we represent 21 as 3 groups of 7, then the euclidean algorithm won't break up a group:
+
+![](images/21_10_rem1_reorder.png)
+
+Okay, that proves it in the case of the pair (21, 7), but do we have a generic argument for *any* pair of numbers? If we take a pair of numbers and
 
 
 
