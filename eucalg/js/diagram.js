@@ -115,9 +115,14 @@ function draw ( canvas, fs, cx, cy, s, color_config) {
 //draw (c1, [7, 3], 450, 315, 115, {number: 5, color: '#d3121c'} );
 
 // 21_15_rem2
-draw (c1, [5, 3], 150, 300, 115, [{number: 2, color: '#4bd312'},
-                                   {number: 2, color: '#d75312'}] );
-draw (c1, [2, 3], 450, 315, 115, [{number: 2, color: '#d7cc12'}] );
+//draw (c1, [5, 3], 150, 300, 115, [{number: 2, color: '#4bd312'},
+//                                   {number: 2, color: '#d75312'}] );
+//draw (c1, [2, 3], 450, 315, 90, [{number: 2, color: '#d7cc12'}] );
+
+// 21_15_rem3
+draw (c1, [1, 3], 150, 300, 90, [{number: 1, color: '#1271d3'}] );
+draw (c1, [2, 3], 450, 260, 115, [{number: 1, color: '#d7cc12'},
+                                   {number: 1, color: '#1271d3'}] );
 
 //draw (c1, [7, 2, 3], 300, 300, 270 );
 //draw (c2, [5, 4, 3], 300, 300, 270 );
