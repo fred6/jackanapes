@@ -5,7 +5,13 @@ Numbers can be classified as either *composite* or *prime*. Prime numbers have n
 ![](twelve.png)
 
 ## The algorithm
-Euclid's algorithm is an algorithm for finding the greatest common divisor of two integers. Unfortunately, it is usually presented in a (to me) baffling and unintuitive manner. It may just be because I'm not the sharpest tool in the shed, but I never grasped why the remainder had the same divisors as the starting numbers. Take a look:
+Euclid's algorithm is an algorithm for finding the greatest common divisor of two integers. Here's a description in words:
+
+  > To find the greatest common divisor of two numbers, **a** and **b** (**a** > **b**):
+  > If **a** is even divisible by **b**, the answer is **b**.
+  > Otherwise, if **r** is the remainder of **a** / **b** and **r** is not zero, so the answer is the greatest common divisor of **b** and **r**
+
+And one in pseudocode:
 
     function gcd(a, b):
         // assuming a > b
@@ -18,6 +24,8 @@ Euclid's algorithm is an algorithm for finding the greatest common divisor of tw
 
 Here `mod` means the result of taking **a** modulo **b**, i.e. finding the remainder after dividing **a** by **b**.
 
+(Notice that the english version used a *recursive* formulation, while the pseudocode version was *imperative*. There is no practical difference.)
+
 So, why does it work? The standard response is that algorithm utilizes a *loop invariant*: every common divisor of **a** and **b** is also a divisor of **b** and **r**. Since the set of divisors stays constant for each iteration of the loop, and since we reduce numbers until we can't do it any more (notice that if we did it one more step, **r** would be equal to 0 since **b** divides **a** after the last step in our algorithm above.) To hammer that point home: every common divisor divides **r**, and therefore divides **b** after each step, including the **biggest** common divisor. If we stop when **b** divides **a**, then we must be stopping when **b** is the greatest common divisor (because we know, at the stopping point, that at least **b** divides **a**, so the GCD must be at least as big as **b**. But we know it can't be bigger than **b**, because the GCD also divides **b**).
 
 That explanation may satisfy you, but you would have to 1) already understand why the set of divisors is preserved through each step through the loop, or 2) take my word for it. Since 2) isn't intellectually responsible (you don't even *know* me, and I'm just a pseudonymous internet person) and since 1) isn't likely to be true (otherwise you wouldn't be reading an article that purports to show you what you already understand), we shall have to press the issue to find out the reason why.
@@ -25,3 +33,5 @@ That explanation may satisfy you, but you would have to 1) already understand wh
 Let's start with a simple example, 21 and 15. We can visualize 21 as seven groups of 3, and 15 as five groups of 3:
 
 ![](21_15.png)
+
+The euclidean algorithm says this: if we take as many 15's out of 21 as we can, the remainder will be some number of groups of 3.
