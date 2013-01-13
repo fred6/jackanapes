@@ -6,16 +6,18 @@ Numbers can be classified as either *composite* or *prime*. Prime numbers have n
 
 ![](images/twelve.png)
 
-There is, however, no way to factor primes like 7 into smaller groupings (or, the "smaller groups" are just groups of 1):
+There is, however, no way to factor primes like 7 into smaller groupings. Or, if you prefer, a prime number is a collection of "groups" of 1:
 
 ![](images/seven.png)
+
+The main theme in this article will be these groupings of numbers.
 
 ## The algorithm
 Euclid's algorithm is an algorithm for finding the greatest common divisor of two integers. Here's a description in words:
 
   > To find the greatest common divisor of two numbers, **a** and **b** (**a** > **b**):
   > If **a** is even divisible by **b**, the answer is **b**.
-  > Otherwise, if **r** is the remainder of **a** / **b** and **r** is not zero, so the answer is the greatest common divisor of **b** and **r**
+  > Otherwise, if **r** is the remainder of **a** / **b**, then **r** is not zero, so the answer is the greatest common divisor of **b** and **r**
 
 And one in pseudocode:
 
