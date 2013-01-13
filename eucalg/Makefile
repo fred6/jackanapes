@@ -8,4 +8,3 @@ html:
 		    --include-after-body $(include_dir)/footer.html \
 		    --title-prefix $(title) \
 			--smart \
-			--toc
