@@ -10,6 +10,8 @@ There is, however, no way to factor primes like 7 into smaller groupings. Or, if
 
 ![](images/seven.png)
 
+In other words, the units in a composite number clump together into "families",     while in primes they're all individualists.
+
 The main theme in this article will be these groupings of numbers.
 
 ## The algorithm
