@@ -11,8 +11,8 @@
     q { quotes: "“" "”" "‘" "’"; }
   </style>
       <meta name="viewport" content="width=device-width">
-      <link rel="stylesheet" href="/css/style.css">
-      <script data-main="js/main" src="/js/require.js"></script>
+      <link rel="stylesheet" href="css/style.css">
+      <script data-main="js/main" src="js/require.js"></script>
 </head>
 <body>
 <div id="container">
@@ -20,11 +20,11 @@
 <h2 id="preliminaries">Preliminaries</h2>
 <p>Numbers can be classified as either <em>composite</em> or <em>prime</em>. Prime numbers have no divisors other than 1 and themselves. Composite numbers, on the other hand, can be decomposed into groupings of smaller numbers. For example, one way to represent 12 is 3 times 4. We can picture this as either 4 groups of 3 or 3 groups of 4:</p>
 <figure>
-<img src="/images/twelve.png"><figcaption></figcaption>
+<img src="images/twelve.png"><figcaption></figcaption>
 </figure>
 <p>There is, however, no way to factor primes like 7 into smaller groupings (or, the <q>smaller groups</q> are just groups of 1):</p>
 <figure>
-<img src="/images/seven.png"><figcaption></figcaption>
+<img src="images/seven.png"><figcaption></figcaption>
 </figure>
 <h2 id="the-algorithm">The algorithm</h2>
 <p>Euclid’s algorithm is an algorithm for finding the greatest common divisor of two integers. Here’s a description in words:</p>
@@ -46,21 +46,21 @@
 <h2 id="in-pictures">In pictures</h2>
 <p>Let’s start with a simple example, 21 and 15. We can visualize 21 as seven groups of 3, and 15 as five groups of 3:</p>
 <figure>
-<img src="/images/21_15.png"><figcaption></figcaption>
+<img src="images/21_15.png"><figcaption></figcaption>
 </figure>
 <p>The euclidean algorithm says this: if we take as many 15’s out of 21 as is possible, the remainder will be some number of groups of 3.</p>
 <figure>
-<img src="/images/21_15_rem1.png"><figcaption></figcaption>
+<img src="images/21_15_rem1.png"><figcaption></figcaption>
 </figure>
 <p>Well golly, it seems to have worked. The right side has seven groups of 3, the left side has give groups of 3. When we take five groups away from 7 groups, we’re left with two groups of 3, commonly known as 6.</p>
 <p>With a remainder of 6, the algorithm then moves into the next step of finding the GCD of 15 and 6:</p>
 <figure>
-<img src="/images/21_15_rem2.png"><figcaption></figcaption>
+<img src="images/21_15_rem2.png"><figcaption></figcaption>
 </figure>
 <p>Instead of thinking about division and remainders, we can also think about repeatedly subtracting 6 from 15. Each time we take two groups of 3 away from 15. The steps have been marked as different colors in the above image.</p>
 <p>After taking two groups of 3 from 15, then taking two more groups of 3 (i.e taking two groups of 3 <em>twice</em>), we are left with a single group of 3 on the left side.</p>
 <figure>
-<img src="/images/21_15_rem3.png"><figcaption></figcaption>
+<img src="images/21_15_rem3.png"><figcaption></figcaption>
 </figure>
 <p>This is where the algorithm halts. On the left side we have a single group of 3, so we can subtract it from the right side until there’s nothing left. In other words, 6 is divisible by 3, so 3 is the greatest common divider of 21 and 15 (the two numbers we started with, if you recall).</p>
 <h2 id="a-recap-and-a-example-with-coprimes">A recap and a example with coprimes</h2>
