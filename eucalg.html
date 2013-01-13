@@ -22,14 +22,15 @@
 <figure>
 <img src="images/twelve.png"><figcaption></figcaption>
 </figure>
-<p>There is, however, no way to factor primes like 7 into smaller groupings (or, the <q>smaller groups</q> are just groups of 1):</p>
+<p>There is, however, no way to factor primes like 7 into smaller groupings. Or, if you prefer, a prime number is a collection of <q>groups</q> of 1:</p>
 <figure>
 <img src="images/seven.png"><figcaption></figcaption>
 </figure>
+<p>The main theme in this article will be these groupings of numbers.</p>
 <h2 id="the-algorithm">The algorithm</h2>
 <p>Euclid’s algorithm is an algorithm for finding the greatest common divisor of two integers. Here’s a description in words:</p>
 <blockquote>
-<p>To find the greatest common divisor of two numbers, <strong>a</strong> and <strong>b</strong> (<strong>a</strong> &gt; <strong>b</strong>): If <strong>a</strong> is even divisible by <strong>b</strong>, the answer is <strong>b</strong>. Otherwise, if <strong>r</strong> is the remainder of <strong>a</strong> / <strong>b</strong> and <strong>r</strong> is not zero, so the answer is the greatest common divisor of <strong>b</strong> and <strong>r</strong></p>
+<p>To find the greatest common divisor of two numbers, <strong>a</strong> and <strong>b</strong> (<strong>a</strong> &gt; <strong>b</strong>): If <strong>a</strong> is even divisible by <strong>b</strong>, the answer is <strong>b</strong>. Otherwise, if <strong>r</strong> is the remainder of <strong>a</strong> / <strong>b</strong>, then <strong>r</strong> is not zero, so the answer is the greatest common divisor of <strong>b</strong> and <strong>r</strong></p>
 </blockquote>
 <p>And one in pseudocode:</p>
 <pre><code>function gcd(a, b):
