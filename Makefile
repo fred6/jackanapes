@@ -1,5 +1,5 @@
 include_dir = eucalg/build
-title = 'Euclidean algorithm, visualized'
+title = 'A visual explanation of the euclidean algorithm'
 
 html:
 	pandoc -s eucalg.md -t html5 -o eucalg.html \
