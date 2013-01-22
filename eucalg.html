@@ -35,7 +35,9 @@
 </blockquote>
 <p>And one in pseudocode:</p>
 <pre><code>function gcd(a, b):
-    // assuming a &gt; b
+    if ( a &lt; b ):
+        return gcd(b, a)
+
     while (b does not divide a):
         r = a mod b
         a = b
@@ -78,7 +80,7 @@
 </figure>
 <p>Nope, no such luck.</p>
 <p>Okay, that proves it in the case of the pair (21, 7), but do we have a generic argument for <em>any</em> pair of numbers?</p>
-<p>One thing to notice is that each time when we execute this algorithm, we are left with a single dot at the end. The situation is reminiscent of applying the algorithm to two prime numbers (which, if you recall, are numbers that cannot be grouped into smaller families of dots). Consider the example of 7 and 17:</p>
+<p>One thing to notice is that, so far, when we execute this algorithm for numbers with incompatible groups, we are left with a single dot at the end. The situation is reminiscent of applying the algorithm to two prime numbers (which, if you recall, are numbers that cannot be grouped into smaller families of dots). Consider the example of 7 and 17:</p>
 <figure>
 <img src="images/7_17.png"><figcaption></figcaption>
 </figure>
