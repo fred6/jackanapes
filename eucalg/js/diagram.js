@@ -132,9 +132,29 @@ draw (c1, [7, 3], 450, 300, 115, [{number: 3, color: '#d31292'},
 */
 
 // 21_10_rem1
-draw (c1, [5, 2], 150, 300, 115, [{number: 5, color: '#1271d3'}] );
-draw (c1, [3, 7], 450, 300, 115, [{number: 1, color: '#d31292'},
-                                   {number: 1, color: '#1271d3'}] );
+//draw (c1, [5, 2], 150, 300, 115, [{number: 5, color: '#1271d3'}] );
+//draw (c1, [3, 7], 450, 300, 115, [{number: 1, color: '#d31292'},
+//                                   {number: 1, color: '#1271d3'}] );
+
+// 7_17
+draw (c1, [7], 150, 120, 105, [{number: 7, color: '#e4813c'}] );
+draw (c1, [17], 450, 120, 115, [{number: 17, color: '#e3e004'}] );
+draw (c1, [7], 150, 400, 105, [{number: 7, color: '#e4813c'}] );
+draw (c1, [17], 450, 400, 115, [{number: 7, color: '#d31292'},
+                                {number: 7, color: '#e4813c'},
+                                {number: 3, color: '#e3e004'} ] );
+
+draw (c2, [7], 150, 120, 105, [{number: 7, color: '#e4813c'}] );
+draw (c2, [3], 450, 120, 95, [{number: 3, color: '#e3e004'}] );
+
+draw (c2, [7], 150, 400, 105, [{number: 3, color: '#e3e004'}, 
+                               {number: 3, color: '#66e495'},
+                               {number: 1, color: '#e4813c'} ] );
+draw (c2, [3], 450, 400, 95, [{number: 3, color: '#e3e004'}] );
+/*
+draw (c1, [17], 450, 300, 115, [{number: 17, color: '#d31292'},
+                                {number: 3, color: '#1271d3'}] );
+                                */
 
 //draw (c1, [7, 2, 3], 300, 300, 270 );
 //draw (c2, [5, 4, 3], 300, 300, 270 );

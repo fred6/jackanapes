@@ -79,6 +79,14 @@ Nope, no such luck.
 
 Okay, that proves it in the case of the pair (21, 7), but do we have a generic argument for *any* pair of numbers?
 
+One thing to notice is that each time when we execute this algorithm, we are left with a single dot at the end. The situation is reminiscent of applying the algorithm to two prime numbers (which, if you recall, are numbers that cannot be grouped into smaller families of dots). Consider the example of 7 and 17:
+
+![](images/7_17.png)
+
+This result makes perfect sense if you remember that prime numbers can be thought of as being composed of "families" of one dot. Each time we substract off some number of families of one dot, and the algorithm will terminate when we have only one such family left. That is, it terminates with a single dot, indicating that the greatest common divider of two prime numbers is 1.
+
+However, our previous case of 10 and 21 resulted in a GCD of 1 despite neither 10 nor 21 being prime. Why?
+
 
 
 ## What do I do with these words, if anything?
