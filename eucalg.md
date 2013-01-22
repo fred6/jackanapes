@@ -89,6 +89,8 @@ This result makes perfect sense if you remember that prime numbers can be though
 
 However, our previous case of 10 and 21 resulted in a GCD of 1 despite neither 10 nor 21 being prime. Why?
 
+As we alluded to above, 10 and 21 are said to be **coprime** because their groups are "incompatible". What it really means is that 10 and 21 are a pair of numbers with gcd = 1, but intuitively, for our purposes, we can think of it like this: *even though the numbers themselves can be grouped up into smaller families, these families are irrelevant once we start dividing/subtracting*. For 10 and 21, we might as well have arranged the dots in one big circle (like we do for primes) and started subtracting, because there is no way that we can group either number into smaller families that will tell us any useful information about the division of 21 by 10.
+
 
 
 ## What do I do with these words, if anything?
