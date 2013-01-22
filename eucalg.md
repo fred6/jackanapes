@@ -24,7 +24,9 @@ Euclid's algorithm is an algorithm for finding the greatest common divisor of tw
 And one in pseudocode:
 
     function gcd(a, b):
-        // assuming a > b
+        if ( a < b ):
+            return gcd(b, a)
+
         while (b does not divide a):
             r = a mod b
             a = b
