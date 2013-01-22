@@ -50,7 +50,7 @@ The euclidean algorithm says this: if we take as many 15's out of 21 as is possi
 
 ![](images/21_15_rem1.png)
 
-Well golly, it seems to have worked. The right side has seven groups of 3, the left side has five groups of 3. When we take five groups away from 7 groups, we're left with two groups of 3, commonly known as 6.
+Well golly, it seems to have worked. The right side has seven groups of 3, the left side has five groups of 3. When we take five groups away from seven groups, we're left with two groups of 3, commonly known as 6.
 
 With a remainder of 6, the algorithm then moves into the next step of finding the GCD of 15 and 6:
 
