@@ -24,7 +24,9 @@ Euclid's algorithm is an algorithm for finding the greatest common divisor of tw
 And one in pseudocode:
 
     function gcd(a, b):
-        // assuming a > b
+        if ( a < b ):
+            return gcd(b, a)
+
         while (b does not divide a):
             r = a mod b
             a = b
@@ -79,7 +81,7 @@ Nope, no such luck.
 
 Okay, that proves it in the case of the pair (21, 7), but do we have a generic argument for *any* pair of numbers?
 
-One thing to notice is that each time when we execute this algorithm, we are left with a single dot at the end. The situation is reminiscent of applying the algorithm to two prime numbers (which, if you recall, are numbers that cannot be grouped into smaller families of dots). Consider the example of 7 and 17:
+One thing to notice is that, so far, when we execute this algorithm for numbers with incompatible groups, we are left with a single dot at the end. The situation is reminiscent of applying the algorithm to two prime numbers (which, if you recall, are numbers that cannot be grouped into smaller families of dots). Consider the example of 7 and 17:
 
 ![](images/7_17.png)
 
